@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :method
       t.string :image
       t.integer :user_id
-
+      
     end
   end
 end
