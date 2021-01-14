@@ -1,10 +1,12 @@
 <h1>Create Post</h1>
-    <form action="/posts" method="log">
+
+    <form action="/posts" method="post">
     <label>Title</label>
     <input type="text" name="title">
     <label>Post</label>
-    <input type="text" name="method">
+    <textarea name=method> </textarea>
     <label>Image</label>
     <input type="text" name="image">
     <button type="submit">Create Post</button>
+    <p><%= @error %></p>
 </form>

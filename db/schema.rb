@@ -13,16 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20210112064127) do
 
-  create_table "posts", force: :cascade do |t|
+create_table "posts", force: :cascade do |t|
     t.string  "title"
     t.text    "method"
     t.string  "image"
     t.integer "user_id"
-  end
+end
 
-  create_table "users", force: :cascade do |t|
+create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
-  end
+end
 
 end
