@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     
     post '/posts' do
         post = Post.new(params)
-        if !post.title.empty? && !post.method.empty?
+        if !post.title.empty? 
             post.save
             redirect '/posts'
             
@@ -24,8 +24,14 @@ end
         erb :'/posts/index'
     end
 
-    get '/posts/id' do 
-        @post = Post.find(params["id"])
+    get '/posts/:id' do 
+        @posts = Post.find(params["id"])
         erb :'/posts/show'
     end
+
+    get '/posts/:id/edit' do
+        @posts = Post.find(params["id"])
+        erb :'/posts/edit'
+    end
+
 end
