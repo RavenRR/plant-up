@@ -1,7 +1,7 @@
 <h1>Posts</h1>
-
+<a href="/posts/new">Create a post</a>
 <% @posts.each do |posts| %>
-    <h2><a href="/posts/<%= posts.id %>"></a> <%= posts.title %> </h2>
+    <h2><a href="/posts<%= posts.id %>"></a> <%= posts.title %> </h2>
     <p><%= posts.method %></p>
     <img src="<%= posts.image %>" alt="post">
     <% end %>

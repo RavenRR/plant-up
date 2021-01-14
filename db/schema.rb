@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210112064127) do
+ActiveRecord::Schema.define(version: 20210114175119) do
 
-create_table "posts", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.string  "title"
     t.text    "method"
-    t.string  "image"
+    t.string  "image",   default: "https://imgur.com/g5h1guS"
     t.integer "user_id"
-end
+  end
 
-create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
-end
+  end
 
 end
