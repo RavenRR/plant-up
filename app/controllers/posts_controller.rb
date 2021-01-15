@@ -17,7 +17,7 @@ class PostsController < ApplicationController
             erb :'/posts/new'
     
     end
-end
+end 
 
     get '/posts' do
         @posts = Post.all.reverse

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20210114222853) do
   create_table "posts", force: :cascade do |t|
     t.string  "title"
     t.text    "method"
-    t.string  "image",   default: "https://i.pinimg.com/originals/55/5d/d3/555dd36cc3fb4f7f6d1efe417ed9aa43.png"
+    t.string  "image",   default: "https://cdn.pixabay.com/photo/2016/01/30/14/12/flowers-1169667__340.png"
     t.integer "user_id"
   end
 

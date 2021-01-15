@@ -1,0 +1,12 @@
+<h1>Edit Post for <%= @posts.title %> </h1>
+
+    <p><%= @error %></p>
+    <form action="/posts/<%@posts.id%>" method="post">
+    <label>Title</label>
+    <input type="text" name="title" value="<%= @posts.title %>">
+    <label>Post</label>
+    <textarea name="method"> </textarea>
+    <label>Image</label>
+    <input type="text" name="image">
+    <button type="submit">Edit Post</button>
+</form>
