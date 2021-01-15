@@ -1,12 +1,14 @@
 <h1>Edit Post for <%= @posts.title %> </h1>
 
-    <p><%= @error %></p>
-    <form action="/posts/<%@posts.id%>" method="post">
+    
+    <form action="/posts/<%=@posts.id%>" method="post">
+    <input type="hidden" name="_method" value="patch"> 
     <label>Title</label>
-    <input type="text" name="title" value="<%= @posts.title %>">
+    <input type="text" name="post[title]" value="<%= @posts.title %>">
     <label>Post</label>
-    <textarea name="method"> </textarea>
+    <textarea name="post[method]"> </textarea>
     <label>Image</label>
-    <input type="text" name="image">
+    <input type="text" name="post[image]" value="<%= @posts.image %>">
     <button type="submit">Edit Post</button>
-</form>
+    <p><%= @error %></p>
+</form>   
