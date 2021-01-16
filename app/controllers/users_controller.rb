@@ -17,6 +17,8 @@ class UsersController < ApplicationController
     end
 
     get '/myposts' do
-        @posts = current_user.posts
+        @posts = current_user.posts.reverse
+        erb :'/posts/index'
+    end
 end
 
