@@ -1,2 +1,7 @@
-<h1><%= @posts.title %> </h1>
-
+<h1><%= @posts.title %></h1>
+<h2><%= @posts.method %></h2>
+<img src="<%= @posts.image %>">
+<form action="/posts/<%= @posts.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button type="submit">Delete post</button>
+    </form>

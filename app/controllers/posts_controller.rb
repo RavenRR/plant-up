@@ -43,4 +43,12 @@ end
             erb :'/posts'
         end
     end
+
+    #destroy
+
+    delete '/posts/:id' do
+        posts = Post.find(params[:id])
+        posts.destroy
+        redirect '/posts'
+    end
 end
