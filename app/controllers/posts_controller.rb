@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     end
 
     post '/posts' do
-        post = Post.new(params)
+        post = current_user.posts.build(params)
         if !post.title.empty? 
             post.save
             redirect '/posts'
@@ -22,13 +22,13 @@ class PostsController < ApplicationController
 end 
 
     get '/posts' do
-        if logged_in?
+    if logged_in?
         @posts = Post.all.reverse
         erb :'posts/index'
-        else
-            redirect "/login"
-        end
+    else
+        redirect "/login"
     end
+end
 
     get '/posts/:id' do 
         if logged_in?
@@ -36,6 +36,7 @@ end
         erb :'posts/show'
     else
         redirect "/login"
+
     end
 end
     
