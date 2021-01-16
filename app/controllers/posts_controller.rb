@@ -2,8 +2,13 @@ class PostsController < ApplicationController
 
 
     get '/posts/new' do
+    
+        
+        if User.find_by(id: session[:user_id])
         erb :'/posts/new'
-
+        else
+            redirect '/login'
+        end
     end
 
     post '/posts' do
@@ -19,14 +24,22 @@ class PostsController < ApplicationController
 end 
 
     get '/posts' do
+        if User.find_by(id: session[:user_id])
         @posts = Post.all.reverse
         erb :'posts/index'
+        else
+            redirect "/login"
+        end
     end
 
     get '/posts/:id' do 
+        if User.find_by(id: session[:user_id])
         @posts = Post.find(params[:id])
         erb :'posts/show'
+    else
+        redirect "/login"
     end
+end
     
     get '/posts/:id/edit' do
         @posts = Post.find(params[:id])
