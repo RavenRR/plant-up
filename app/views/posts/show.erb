@@ -7,3 +7,6 @@
     <button type="submit">Delete post</button>
     <% end %>
     </form>
+    <% if @posts.user %>
+    <p>Post created by <%= @posts.user.username %></p>
+    <% end %>

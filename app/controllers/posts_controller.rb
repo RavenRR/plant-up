@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
     post '/posts' do
         post = current_user.posts.build(params)
-        if  post.save
+        if post.save
             redirect '/posts'
         else
             @error = "Invalid. Please enter again."
@@ -48,7 +48,7 @@ end
             redirect "/posts"
         else
             @error = "Invalid. Please enter again."
-            erb :'/posts'
+            erb :'/posts/show'
         end
     end
 

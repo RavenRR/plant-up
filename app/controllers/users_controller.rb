@@ -5,13 +5,18 @@ class UsersController < ApplicationController
     end
 
     post '/signup' do
-        if user = User.new(params)
-        session[:user_id] = user.id
+
+        user = User.new(params)
+        if user.save
+            session[:user_id] = user.id
             redirect '/posts'
         else
-            @error = "Invalid credentials"
+            @error = "Invalid. Please enter again."
             erb :'/users/signup'
         end
     end
+
+    get '/myposts' do
+        @posts = current_user.posts
 end
 
