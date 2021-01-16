@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
 
+    before do
+        require_login
+    end
 
     get '/posts/new' do
-        if logged_in?
         erb :'/posts/new'
-        else
-            redirect '/login'
-        end
     end
 
     post '/posts' do
@@ -22,8 +21,7 @@ class PostsController < ApplicationController
 end 
 
     get '/posts' do
-    if logged_in?
-        @posts = Post.all.reverse
+    if @posts = Post.all.reverse
         erb :'posts/index'
     else
         redirect "/login"
@@ -31,22 +29,17 @@ end
 end
 
     get '/posts/:id' do 
-        if logged_in?
-        @posts = Post.find(params[:id])
-        erb :'posts/show'
-    else
-        redirect "/login"
-
-    end
-end
+            @posts = Post.find_by(id: params[:id])
+            if @posts
+                erb :'posts/show'
+            else
+                redirect "/posts"
+            end
+        end
     
     get '/posts/:id/edit' do
-        if logged_in?
         @posts = Post.find(params[:id])
         erb :'/posts/edit'
-        else 
-            redirect "/login"
-        end
     end
 
     patch '/posts/:id' do
