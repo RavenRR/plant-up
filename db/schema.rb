@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210114222853) do
+ActiveRecord::Schema.define(version: 20210112064127) do
 
   create_table "posts", force: :cascade do |t|
     t.string  "title"
     t.text    "method"
-    t.string  "image",   default: "https://cdn.pixabay.com/photo/2016/01/30/14/12/flowers-1169667__340.png"
+    t.string  "image"
     t.integer "user_id"
   end
 

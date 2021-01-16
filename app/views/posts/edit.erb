@@ -6,7 +6,7 @@
     <label>Title</label>
     <input type="text" name="post[title]" value="<%= @posts.title %>">
     <label>Post</label>
-    <textarea name="post[method]"> </textarea>
+    <textarea name="post[method]"><%= @posts.method %></textarea>
     <label>Image</label>
     <input type="text" name="post[image]" value="<%= @posts.image %>">
     <button type="submit">Edit Post</button>
