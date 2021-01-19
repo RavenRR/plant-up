@@ -26,5 +26,8 @@ class ApplicationController < Sinatra::Base
       redirect '/login'
     end
   end
+  def user 
+    user = User.find_by(username: params["username"]) && user.authenticate(params["password"])
+  end
 end
 

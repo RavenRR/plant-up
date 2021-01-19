@@ -5,17 +5,22 @@ class SessionsController < ApplicationController
     end
 
     post '/login' do
-        user = User.find_by(:username => params[:username])
+        if params["username"].empty? || params["password"].empty?
+            @error = "Username/Password must be filled in."
+            erb :'users/login'
+        else 
             if user && user.authenticate(params["password"])
                 session[:user_id] = user.id
                 redirect '/posts'
             else
-                @error = "Invalid. Please enter again."
+                @error = "Account not found."
                 erb :'users/login'
             end
         end
+    end
+
     get '/logout' do
         session.clear
-        redirect '/home'
+        redirect '/'
     end
 end
