@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
                 session[:user_id] = user.id
                 redirect '/posts'
             else
-                @error = "Account not found."
+                @error = "Did not recognize Username/Password. Please try again."
                 erb :'users/login'
             end
         end
