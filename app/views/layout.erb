@@ -17,16 +17,18 @@
     <div class="container">
       <div class="menu">
       <ul>
+      <li class="logo"><img src="https://media4.giphy.com/media/QZn3ACwfckcq5DM6D7/giphy.gif"></li>
+      
       <% if logged_in? %>
-      <li><div><a href="/myposts">My Posts</a></div></li>
-      <li><div><a href="/posts">Posts</a></div></li>
-      <li><div><a href="/logout">Log Out</a></div></li>
+      <li><a href="/myposts">My Posts</a></li>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/logout">Log Out</a></li>
       <% else %>
-      <li><div><a href="/signup">Sign Up</a></div></li>
-      <li><div><a href="/login">Log In</a></div></li>
+      <li><div><a href="/signup">Sign Up</a></li>
+      <li><a href="/login">Log In</a></li>
       <% end %>
       <li><div><a href="/">Home</a></div></li>
-      </ul>
+        </ul> 
     </div>
   </div>
     <div class="wrapper">
