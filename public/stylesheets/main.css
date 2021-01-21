@@ -14,3 +14,12 @@ body
     background: lavenderblush;
     border-radius: 15px;
 }
+h2{
+    text-align: center;
+    color: dimgray;
+    padding: 20px;
+}
+label{
+    color: dimgray;
+    font-size: 17px;
+}
