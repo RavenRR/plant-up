@@ -1,9 +1,20 @@
-
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
+</head>    
+<body>    
+    <h2>Login</h2><br>    
+    <div class="login">   
 <form action="/login" method="post">
-    <label>Username</label>
-    <input type="text" name="username">
-    <label>Password</label>
-    <input type="password" name="password">
-    <input type="submit" value="Log in">
+    <a><label>Username</label></a>
+    <a><input type="text" name="username"></a>
+    <a><label>Password</label></a>
+    <a><input type="password" name="password"></a>
+    <a><input type="submit" value="Log in"></a>
 </form>
+</div>
+</body>
+</html>
 <p><%= @error %></p>
