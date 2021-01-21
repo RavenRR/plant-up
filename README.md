@@ -1,6 +1,6 @@
 # Plant Up
 
-Plant Up is an application created with Sinatra and Active Record. Plant Up allows users to post about their plants!
+Plant Up is an Sinatra-based Ruby application that allows users to post about their plants!
 
 After signing up and/or logging in, you can view/create/delete/edit a post.
 
