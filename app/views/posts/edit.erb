@@ -1,6 +1,4 @@
 <h1>Edit Post for <%= @posts.title %> </h1>
-
-    
     <form action="/posts/<%=@posts.id%>" method="post">
     <input type="hidden" name="_method" value="patch"> 
     <label>Title</label>

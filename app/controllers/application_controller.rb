@@ -13,6 +13,11 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
+  error Sinatra::NotFound do
+    content_type 'text/plain'
+    [404, "Page Requested Not Found"]
+  end
+
   def logged_in?
     !!current_user
   end
