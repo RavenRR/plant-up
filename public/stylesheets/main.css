@@ -53,8 +53,20 @@ a{
     float: left;
     background-color: rgb(211, 188, 255);
 }
-html, body{
-    height: 100%;
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;    
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;           
 }
 .menu ul{
     display: inline-flex;
@@ -100,10 +112,6 @@ html, body{
     margin-top: -20px;
     padding-left: 50px;
 }
-footer { 
-    text-align: center; 
-    }
-
 .BUTTON{
         box-shadow:inset 0px 1px 0px 0px #ffffff;
         background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
