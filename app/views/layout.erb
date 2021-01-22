@@ -14,22 +14,24 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
-    
-      
+<div class="menu">
+      <ul>
       <% if logged_in? %>
-      <li><a href="/myposts">My Posts</a></li>
-      <li><a href="/posts">Posts</a></li>
-      <li><a href="/logout">Log Out</a></li>
+      <li><a href="/myposts" class="BUTTON">My Posts</a></li>
+      <li><a href="/posts" class="BUTTON">Posts</a></li>
+      <li><a href="/logout" class="BUTTON">Log Out</a></li>
       <% else %>
-      <li><a href="/signup">Sign Up</a></li>
-      <li><a href="/login">Log In</a></li>
+      <li><a href="/signup" class="BUTTON">Sign Up</a></li>
+      <li><a href="/login" class="BUTTON">Log In</a></li>
       <% end %>
-      <li><div><a href="/">Home</a></div></li>
+      <li><div><a href="/" class="BUTTON">Home</a></div></li>
+  </ul>
+</div>
       
     <div class="wrapper">
 
         <%= yield %>
-
+      
       <footer class="branding">
         <small>&copy; 2021 <strong>PlantUp</strong></small>
       </footer>

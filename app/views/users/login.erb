@@ -2,17 +2,21 @@
 <html>    
 <head>    
     <title>Login Form</title>    
-    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <link rel="stylesheet" href="/stylesheets/main.css" /> 
 </head>    
 <body>    
-    <h2>Login</h2><br>    
-    <div class="login">   
+<h2>Login</h2>    
+<div class="login">   
 <form action="/login" method="post">
-    <a><label>Username</label></a>
-    <a><input type="text" name="username"></a>
-    <a><label>Password</label></a>
-    <a><input type="password" name="password"></a>
-    <a><input type="submit" value="Log in"></a>
+    <label>Username</label>
+    <input type="text" name="username">
+    <br><br>
+    <label>Password</label>
+    <input type="password" name="password">
+    <br><br>
+    
+    <input type="submit" value="Log in">
+    <br><br>
 </form>
 <p><%= @error %></p>
 </div>
