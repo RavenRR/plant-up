@@ -1,10 +1,8 @@
-<h1>My Posts</h1>
-<a href="/posts/new">Create a new post</a>
+<a href="/posts/new" class="BUTTON">Create a new post</a><hr>
 <% @posts.each do |post| %>
     <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
     <img src="<%= post.image %>">
     <% if current_user == post.user %>
-    <a href="/posts/ <%= post.id %>/edit">Edit</a>
+    <a href="/posts/ <%= post.id %>/edit" class="BUTTON">Edit</a>
     <% end %>
 <% end %>
-

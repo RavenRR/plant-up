@@ -1,13 +1,23 @@
-
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <link rel="stylesheet" href="/stylesheets/main.css" /> 
+</head>    
+<body>  
+<div class="login"> 
 <h1><%= @posts.title %></h1>
-<h2><%= @posts.method %></h2>
+<p><%= @posts.method %></p>
 <img src="<%= @posts.image %>">
 <form action="/posts/<%= @posts.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
     <% if @posts.user == current_user %>
-    <button type="submit">Delete post</button>
+    <button class="BUTTON" type="submit">Delete post</button>
     <% end %>
     </form>
     <% if @posts.user %>
     <p>Post created by <%= @posts.user.username %></p>
     <% end %>
+    </div>
+    </div>
+</body>
+</html>

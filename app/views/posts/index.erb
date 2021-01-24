@@ -1,11 +1,21 @@
-
-<h1>Posts</h1>
-<a href="/posts/new">Create a post</a>
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Edit Form</title>    
+    <link rel="stylesheet" href="/stylesheets/main.css" /> 
+</head>    
+<body>  
+<div class="login"> 
+<h1> Posts </h1><hr>
+<a href="/posts/new" class="BUTTON">Create a post</a><br><br><hr>
 <% @posts.each do |post| %>
-    <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
+    <h2><a href="/posts/<%= post.id %>" class="BUTTON2"><%= post.title %></a></h2><br>
     <p><%= post.method %></p>
-    <img src="<%= post.image %>">
+    <img src="<%= post.image %>"><br><br>
     <% if current_user == post.user %>
-    <a href="/posts/<%= post.id %>/edit">Edit</a>
+    <a href="/posts/<%= post.id %>/edit" class="BUTTON">Edit</a>
     <% end %>
 <% end %>
+</div>
+</body>
+</html>

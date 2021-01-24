@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />    
 </head>    
 <body> 
-<h2>Sign Up</h2>
-<div class="login">   
+<div class="login">  
+ <h2>Sign Up</h2><hr>
 <form action="/signup" method="post">
     <label>Username</label>
     <input type="text" name="username">
@@ -14,7 +14,7 @@
     <label>Password</label>
     <input type="password" name="password">
     <br><br>
-    <input type="submit" value="Sign up">
+    <input class="BUTTON" type="submit" value="Sign up">
     <p><%= @error %></p>
 </form>
 </div>

@@ -1,4 +1,13 @@
-<h1>Edit Post for <%= @posts.title %> </h1>
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Edit Form</title>    
+    <link rel="stylesheet" href="/stylesheets/main.css" /> 
+</head>    
+<body>  
+<div class="login"> 
+<div class="app-text">
+<h1>Edit Post for <%= @posts.title %> </h1><hr>
     <form action="/posts/<%=@posts.id%>" method="post">
     <input type="hidden" name="_method" value="patch"> 
     <label>Title</label>
@@ -7,6 +16,9 @@
     <textarea name="post[method]"><%= @posts.method %></textarea>
     <label>Image</label>
     <input type="text" name="post[image]" value="<%= @posts.image %>">
-    <button type="submit">Edit Post</button>
+    <button type="submit" class="BUTTON">Edit Post</button>
     <p><%= @error %></p>
 </form>   
+</div>
+</body>
+</html>
