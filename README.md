@@ -15,7 +15,7 @@ After signing up and/or logging in, you can view/create/delete/edit a post.
 
 ## Contributing 
 
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/romeroraven/plant-up. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct]https://github.com/romeroraven/plant-up/blob/master/CODE_OF_CONDUCT.md.
 
 ## License
 
