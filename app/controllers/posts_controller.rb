@@ -17,12 +17,12 @@ class PostsController < ApplicationController
             erb :'/posts/new'
     
     end
-end 
+end
 
     get '/posts' do
-    if @posts = Post.all.reverse
-        erb :'posts/index'
-    else
+        if @posts = Post.all.reverse
+            erb :'posts/index'
+        else
         redirect "/login"
     end
 end
@@ -38,8 +38,16 @@ end
     
     get '/posts/:id/edit' do
         @posts = Post.find(params[:id])
-        erb :'/posts/edit'
+        if logged_in?
+            if @posts.user == current_user 
+            erb :'/posts/edit'
+        else 
+            @error = "You do not have permission to edit this post."
+        end
+    else
+        redirect '/posts'
     end
+end
 
     patch '/posts/:id' do
         @posts = Post.find(params[:id])

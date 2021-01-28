@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
 
   error Sinatra::NotFound do
     content_type 'text/plain'
-    [404, "Page Requested Not Found"]
+    [404]
   end
 
   def logged_in?

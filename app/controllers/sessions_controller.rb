@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
     post '/login' do
         if params["username"].empty? || params["password"].empty?
-            @error = "Username/Password must be filled in."
+            @error = "Username/Password must be filled in." 
             erb :'users/login'
         else 
             if user && user.authenticate(params["password"])

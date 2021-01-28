@@ -1,8 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    float: left;
+    width: 33.33%;  
+    padding: 50px;  
+}
+
+
 body 
 {
     margin: 0;
     padding: 0;
-    background-color: lavender;
+    background-color: rgb(238, 238, 245);
     font-family: 'Arial';
 }
 .login{
@@ -13,8 +24,9 @@ body
     margin: 20 0 0 450px;
     padding: 80px;
     background: lavenderblush;
-    border-radius: 15px;
+    border-radius: 35px;
 }
+
 h2{
     text-align: center;
     color: dimgray;
@@ -81,7 +93,7 @@ a{
 .menu ul li{
     list-style: none; 
     margin: 0 20px;
-    color: #eeb3f8;
+    color: #fbe6ff;
     cursor: pointer;
 }
 .banner{
@@ -98,9 +110,9 @@ a{
     position: relative;
 }
 .app-text h1{
-    font-size: 43px;
-    width: 640px;
-    position: relative;
+    font-size: 30px;
+    width: 340px;
+    position: absolute;
     margin-left: 20px;
 }
 .app-text p{
@@ -112,6 +124,15 @@ a{
     color: #919191;
     
 }
+.app-text h2{
+    width: 650px;
+    font-size: 30px;
+    position: relative;
+    margin: 30px 0 30px;
+    line-height: 25px;
+    color: #0f0d0d;
+    
+}
 .app-picture{
     width: 50%;
     float: right;
@@ -121,6 +142,7 @@ a{
     margin-top: -20px;
     padding-left: 50px;
 }
+
 .BUTTON{
         box-shadow:inset 0px 1px 0px 0px #ffffff;
         background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);

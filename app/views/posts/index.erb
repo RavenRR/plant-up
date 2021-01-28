@@ -1,17 +1,16 @@
 <!DOCTYPE html>    
 <html>    
 <head>    
-    <title>Edit Form</title>    
     <link rel="stylesheet" href="/stylesheets/main.css" /> 
 </head>    
 <body>  
 <div class="login"> 
-<h1> Posts </h1><hr>
+<h1> Posts </h1><hr> 
 <a href="/posts/new" class="BUTTON">Create a post</a><br><br><hr>
 <% @posts.each do |post| %>
     <h2><a href="/posts/<%= post.id %>" class="BUTTON2"><%= post.title %></a></h2><br>
     <p><%= post.method %></p>
-    <img src="<%= post.image %>"><br><br>
+    <img src="<%= post.image %>" alt="post"><br><br>
     <% if current_user == post.user %>
     <a href="/posts/<%= post.id %>/edit" class="BUTTON">Edit</a>
     <% end %>
