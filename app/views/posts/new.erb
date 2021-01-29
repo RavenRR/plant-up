@@ -4,17 +4,14 @@
     <link rel="stylesheet" href="/stylesheets/main.css" /> 
 </head>    
 <body>
-
-
 <div class="login"> 
-<div class="app-text"> 
-<h1>Create Post</h1><hr>
+<h1>Create Post</h1>
     <form action="/posts" method="post">
-    <label>Title</label>
-    <input type="text" name="title">
-    <label>Post</label>
-    <textarea name="method"> </textarea>
-    <label>Image URL</label>
+    <label>Title</label><br>
+    <input type="text" name="title"><br>
+    <label>Post</label><br>
+    <textarea name="method"> </textarea><br>
+    <label>Image URL</label><br>
     <input type="text" name="image"><br><br><br>
     <button type="submit" class="BUTTON"> Submit</button>
     <p><%= @error %></p>

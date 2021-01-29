@@ -1,21 +1,4 @@
-* {
-    box-sizing: border-box;
-}
 
-.box {
-    float: left;
-    width: 33.33%;  
-    padding: 50px;  
-}
-
-
-body 
-{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(238, 238, 245);
-    font-family: 'Arial';
-}
 .login{
     width: 382px;
     overflow: hidden;
@@ -24,12 +7,20 @@ body
     margin: 20 0 0 450px;
     padding: 80px;
     background: lavenderblush;
-    border-radius: 35px;
+    border-radius: 15px;
+}
+h1 {
+    text-align: center;
+}
+p {
+    text-align: left;
+    color: purple;
+    padding: 20px;
 }
 
 h2{
     text-align: center;
-    color: dimgray;
+    color: darkslateblue;
     padding: 20px;
 }
 img {
@@ -38,7 +29,7 @@ img {
     object-fit: cover;
 }
 label{
-    color: dimgray;
+    color: darkblue;
     font-size: 17px;
 }
 #username{
@@ -110,9 +101,10 @@ a{
     position: relative;
 }
 .app-text h1{
-    font-size: 30px;
-    width: 340px;
-    position: absolute;
+    text-align: left;
+    font-size: 43px;
+    width: 640px;
+    position: relative;
     margin-left: 20px;
 }
 .app-text p{
@@ -121,16 +113,7 @@ a{
     position: relative;
     margin: 30px 0 30px;
     line-height: 25px;
-    color: #919191;
-    
-}
-.app-text h2{
-    width: 650px;
-    font-size: 30px;
-    position: relative;
-    margin: 30px 0 30px;
-    line-height: 25px;
-    color: #0f0d0d;
+    color:lightslategrey;
     
 }
 .app-picture{

@@ -4,17 +4,16 @@
     <link rel="stylesheet" href="/stylesheets/main.css" /> 
 </head>    
 <body>  
-<div class="login"> 
-<div class="app-text">
-<h2>Edit Post for <%= @posts.title %> </h2>
+<div class="login">
+<h1>Edit Post for <%= @posts.title %> </h1>
     <form action="/posts/<%=@posts.id%>" method="post">
     <input type="hidden" name="_method" value="patch"> 
-    <label>Title</label>
-    <input type="text" name="post[title]" value="<%= @posts.title %>">
-    <label>Post</label>
-    <textarea name="post[method]"><%= @posts.method %></textarea>
-    <label>Image</label>
-    <input type="text" name="post[image]" value="<%= @posts.image %>"><br><br><br>
+    <label>Title</label><br>
+    <input type="text" name="post[title]" value="<%= @posts.title %>"><br>
+    <label>Post</label><br>
+    <textarea name="post[method]"><%= @posts.method %></textarea><br>
+    <label>Image</label><br>
+    <input type="text" name="post[image]" value="<%= @posts.image %>"><br><br>
     <% if @posts.user == current_user %>
     <button type="submit" class="BUTTON">Submit</button>
     <% end %>

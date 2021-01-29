@@ -1,4 +1,11 @@
-<a href="/posts/new" class="BUTTON">Create a new post</a><hr>
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <link rel="stylesheet" href="/stylesheets/main.css" />    
+</head>    
+<body> 
+<div class="login">
+<a href="/posts/new" class="BUTTON">Create a new post</a>
 <% @posts.each do |post| %>
     <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
     <img src="<%= post.image %>">
@@ -6,3 +13,6 @@
     <a href="/posts/ <%= post.id %>/edit" class="BUTTON">Edit</a>
     <% end %>
 <% end %>
+</div>
+</body>
+</html>
