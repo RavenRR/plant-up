@@ -4,6 +4,9 @@ Plant Up is an Sinatra-based Ruby application that allows users to post about th
 
 After signing up and/or logging in, you can view/create/delete/edit a post.
 
+![image](https://user-images.githubusercontent.com/69707980/114813934-556c7000-9d70-11eb-838c-3d08e8a37ef9.png)
+
+
 
 ## Installation
 
