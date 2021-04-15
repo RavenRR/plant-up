@@ -35,5 +35,8 @@ class ApplicationController < Sinatra::Base
   def user 
     user = User.find_by(username: params["username"])
   end
+  def user_params_empty
+    params["username"].empty? || params["password"].empty?
+  end
 end
 

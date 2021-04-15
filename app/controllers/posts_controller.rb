@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
     post '/posts' do
         post = current_user.posts.build(params)
-        if    post.save
+        if  post.save
             redirect '/posts'
         else
             @error = "Invalid. Please enter again."
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     
     end
 end
-
+ 
     get '/posts' do
         if @posts = Post.all.reverse
             erb :'posts/index'
@@ -64,7 +64,15 @@ end
 
     delete '/posts/:id' do
         posts = Post.find(params[:id])
-        posts.destroy
-        redirect '/posts'
+        if logged_in?
+            if posts.user == current_user
+                posts.destroy
+                redirect '/posts'
+            else 
+                @error = "You do not have permission to delete this post."
+            end
+        else
+            redirect '/posts'
+        end
     end
 end
