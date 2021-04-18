@@ -15,7 +15,10 @@
     <input type="password" name="password">
     <br><br>
     <input class="BUTTON" type="submit" value="Sign up">
-    <p><%= @error %></p>
+    <br>
+    <%if flash[:message] %>
+    <h2><%= flash[:message] %></h2>
+    <% end %>
 </form>
 </div>
 </body>

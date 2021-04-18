@@ -13,7 +13,7 @@ class PostsController < ApplicationController
         if  post.save
             redirect '/posts'
         else
-            @error = "Invalid. Please enter again."
+            flash[:message] = "Invalid. Please enter again."
             erb :'/posts/new'
     
     end
@@ -42,7 +42,7 @@ end
             if @posts.user == current_user 
             erb :'/posts/edit'
         else 
-            @error = "You do not have permission to edit this post."
+        flash[:message] = "Invalid. Please enter again."
         end
     else
         redirect '/posts'
@@ -55,7 +55,7 @@ end
             @posts.update(params["post"])
             redirect "/posts"
         else
-            @error = "Invalid. Please enter again."
+            flash[:message] = "Invalid. Please enter again."
             erb :'/posts/show'
         end
     end
@@ -69,7 +69,7 @@ end
                 posts.destroy
                 redirect '/posts'
             else 
-                @error = "You do not have permission to delete this post."
+                flash[:message] = "Invalid. Please enter again."
             end
         else
             redirect '/posts'

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
             session[:user_id] = user.id
             redirect '/posts'
         else
-            @error = "Invalid. Please enter again."
+            flash[:message] = "Invalid. Please enter again."
             erb :'/users/signup'
         end
     end

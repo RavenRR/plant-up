@@ -2,7 +2,7 @@
 <html>    
 <head>    
     <title>Login Form</title>    
-    <link rel="stylesheet" href="/stylesheets/main.css" /> 
+<link rel="stylesheet" href="/stylesheets/main.css" /> 
 </head>    
 <body>    
 <div class="login">  
@@ -18,7 +18,9 @@
     <input class="BUTTON" type="submit" value="Log in">
     <br><br>
 </form>
-<p><%= @error %></p>
+<% if flash[:message1] %>
+    <h3><%= flash[:message1] %></h3>
+    <%end%>
 </div>
 </body>
 </html>
