@@ -18,9 +18,12 @@ After signing up and/or logging in, you can view/create/delete/edit a post.
 
 ## Contributing 
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/romeroraven/plant-up. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/RavenRR/plant-up. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
 
 ## License
 
-The gem is available as open source under the terms  of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms  of the [MIT License](https://github.com/RavenRR/plant-up/blob/master/LICENSE).
 
+## Code of Conduct
+
+Everyone interacting in the The Coziest Cottage's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/RavenRR/plant-up/blob/master/CODE_OF_CONDUCT.md)
